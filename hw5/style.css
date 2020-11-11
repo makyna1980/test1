@@ -1,0 +1,76 @@
+body {
+    background: #1d1c1c;
+}
+* { margin: 0;
+    padding: 0;
+}
+.wrapper {
+ max-width: 1140px; 
+ display: flex;  
+ margin: 0 auto
+ }
+.boxes {
+    flex:1;
+    text-align: center;
+}
+.icon {
+   padding-top: 108px;
+}
+.title {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 24px;
+    padding-top: 45px; 
+    padding-bottom: 42px;
+}
+.text {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 14px;
+    line-height: 2;
+}
+.scnwrap {
+    max-width: 1140px; 
+    margin: 0 auto; /* центрируем содежимое второго блока макета*/
+}
+div {
+    text-align: center;
+}
+.logo {
+    width: 112px;
+    height: 36px;
+    padding-top: 120px;
+}
+.social {
+    flex: auto;
+    text-align: center;
+    color: #fefbfc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px; 
+    letter-spacing: 1px;
+    padding-top: 50px; 
+}
+.sepr {
+    width: 230px;
+    padding-top: 20px; 
+}
+.block
+{
+  text-align: center;
+}
+.pic {
+    padding-top: 20px; 
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 90px;
+}
+footer {
+    text-align: center;
+    color: #fefbfc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px; 
+}
+i {
+   font-style: normal;
+    color: #19c8fa;
+}
