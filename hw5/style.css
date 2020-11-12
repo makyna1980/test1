@@ -1,11 +1,11 @@
 body {
     background: #1d1c1c;
 }
-* { margin: 0;
+* { margin: 0; /*такие глобальные стили лучше делать в самомо начале файла*/
     padding: 0;
 }
 .wrapper {
- max-width: 1140px; 
+ max-width: 1140px; /* придерживайся одинаковых отступов во всех цсс правилах */
  display: flex;  
  margin: 0 auto
  }
@@ -55,7 +55,7 @@ div {
     padding-top: 20px; 
 }
 .block
-{
+{ /*форматирование тоже одинаковое используй*/
   text-align: center;
 }
 .pic {
