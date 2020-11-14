@@ -1,0 +1,84 @@
+*{transition: all .1s ease-in;} 
+body {
+    background-color: #3A4046;
+}
+header {
+    padding-top: 10px;
+    background-color: #4A4F56; 
+}
+h1, h2 {
+    color: #EB7E7F;
+    background-color: #4A4F56; 
+    font-family: \'Trebuchet MS\', Trebuchet, Arial, sans-serif;
+    text-align: center;  
+}
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 20px;
+}
+.center {
+   width: 500px; /* Ширина элемента в пикселах */
+   padding: 10px; /* Поля вокруг текста */
+   margin: 0 auto; /* Выравниваем по центру */
+}
+input[type="checkbox"]:checked + span { 
+    text-decoration: line-through;
+}
+span {
+    font-family: \'Trebuchet MS\', Trebuchet, Arial, sans-serif;
+    padding: 0 5px;
+    font-size: large;
+    color: #ffffff;
+}
+label {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+label:active {
+    background-color:#EB7E7F;
+}
+p {
+    align-items: center;
+    height: 58px;
+    margin-top: 0;
+    margin-bottom: 0;   
+    background-color: #8B84A0;
+    border-top: #8B84A0 solid 2px;
+    border-bottom: #8B84A0 solid 2px; 
+}
+p:nth-child(2n) {
+    background-color: #7D7695;
+    border-top:  #7D7695 solid 2px;
+    border-bottom: #7D7695 solid 2px; 
+}
+p:hover {
+    background-color: #635E79;
+    border-top: #ffffff solid 2px;
+    border-bottom: #ffffff solid 2px;
+}
+.bracket {
+    color: #ffffff; /* Цвет текста */
+    font-size: smaller;
+    quotes: "(" ")"; /* Устанавливаем вид кавычек */
+} 
+.bracket:before {
+    content: open-quote; /* Добавляем перед текстом открывающую кавычку*/
+}
+.bracket:after {
+    content: close-quote; /* Добавляем после текста закрывающую кавычку*/
+}
+footer {
+    height: 72px;
+    width: 500px; /* Ширина элемента в пикселах */
+    margin: 0 auto; /* Выравниваем по центру */
+    background-color: #4A4F56;
+    color: #EB7E7F;
+    font-family: \'Trebuchet MS\', Trebuchet, Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
