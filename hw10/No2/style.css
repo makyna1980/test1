@@ -1,0 +1,123 @@
+*{
+    transition: all 1s ease-in;
+}
+
+body {
+    background-color: #f6f6f6;
+}
+.wrapper {
+    max-width: 1170px;
+    justify-content: center;
+    margin: 0 auto;
+}
+h1 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    color: #3c3c3c;
+    letter-spacing: 3.298px;
+    padding-top: 110px;
+    margin: 0 auto;
+}
+.dvd {
+    display: block;
+    margin: auto;
+}
+.imgdvd {
+      padding-top: 20px;
+      padding-bottom: 40px;   
+ }
+h2 {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #3c3c3c;
+    line-height: 24px;
+}
+.blocks {
+    position: relative;
+    padding: 60px 0;
+}
+.block1 {
+    position: absolute;
+    left:0;
+    right:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    z-index: 1;
+}
+.avatar {
+    position: relative;
+    width: 270px;
+    height: 270px;
+}
+.photo {
+    width: 270px;
+    height: 270px;
+    position: absolute;
+}
+.name {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #282528;
+    margin-bottom: 0;
+    margin-top: -60px;
+}
+.pstn {
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: lighter;
+    color: #646464;
+    margin-top: 5px;
+}
+.block2 {
+    position: absolute;
+    left:0;
+    right:0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+}
+.nav {
+    display: inline;
+}
+.bg {
+    position: relative;
+}
+.fb {
+    position: relative;
+    top: -150px;
+    left: 79px;
+}
+.g {
+    position: relative;
+    top: -178px;
+    left: 125px;
+}
+.tw {
+    position: relative;
+    top: -206px;
+    left: 167px;
+}
+.blocks:hover .block2 {
+    opacity: 1;
+    transform: translate(10px);
+    z-index: 1;
+    margin: 0 auto;
+    left:0;
+    right:0;
+}
+.blocks:hover .block1 {
+    opacity: 0.5;
+    transform: rotateX(360deg);
+}
