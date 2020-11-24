@@ -4,6 +4,7 @@
 body {
     background-color: #FDDE7E;
 }
+
 .row {
     width: 1200px;
     height: 100vh;
@@ -20,6 +21,7 @@ body {
     width: 360px;
     height: 440px;
     text-align: center;
+    position: inherit;
     align-items: baseline;
     align-content: center;
 }
