@@ -4,26 +4,25 @@
 body {
     background-color: #FDDE7E;
 }
-
-.column {
-    width: 1190px;
+.row {
+    width: 1200px;
+    height: 100vh;
     display: flex;
     justify-content: space-between;
-    background-color:  #FDDE7E;
+    background-color: #FDDE7E;
+    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     margin: 0 auto;
-    padding-top: 20px;
-   
 }
 .cups {
     background-color: white;
     width: 360px;
     height: 440px;
     text-align: center;
-    position: inherit;
-    align-items: center;
+    align-items: baseline;
     align-content: center;
-   }
+}
 .cups:hover {
     height: 500px;
 }
