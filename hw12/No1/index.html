@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="page">
+            <div class="header">
+                <h1 class="header__title">Contact</h1>
+                <div class="header__text">For new projects, ideas, business or anything you'd like to discuss,
+                    contact with me!</div>
+            </div>
+            <div class="container">
+                <form action="#" method="GET">
+                    <div class="form-field">
+                        <div class="form-field__control">
+                            <input name="name" type="text" class="form-field__input" required minlenght="3"
+                                autocomplete="off" placeholder="Your name...">
+                        </div>
+                        <div class="form-field__control">
+                            <input name="email" type="email" class="form-field__input" required minlenght="3"
+                                autocomplete="off" placeholder="Your email...">
+                        </div>
+                        <div class="form-field__control">
+                            <input name="phone" type="text" class="form-field__input" required minlenght="12"
+                                maxlength="12" data-mask="00 000 000 0000" autocomplete="off"
+                                placeholder="Your phone number...">
+                        </div>
+                        <div class="form-field__control">
+                            <input name="birth" type="text" class="form-field__date" required minlenght="8"
+                                maxlength="8" data-mask="00/00/0000" autocomplete="off" placeholder="Your birthday...">
+                            <select class="form-field__gender" name="gender">
+                                <option>- Gender -</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <div class="form-field__control">
+                            <textarea name="message" rows="10" cols="30" wrap="soft" autocomplete="off"
+                                class="form-field__message" placeholder="Your message..."></textarea>
+                        </div>
+                        <div class="form-field__control">
+                            <button class="form-field__submit">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="contacts">
+                    <div class="contacts__row">
+                        <h2 class="contacts__title"> Address</h2>
+                        <h3 class="contacts__text"> 123 City name, Street, City, Country</h3>
+                    </div>
+                    <div class="contacts__row">
+                        <h2 class="contacts__title"> Email</h2>
+                        <h3 class="contacts__text"> cahee@domain.com</h3>
+                    </div>
+                    <div class="contacts__row">
+                        <h2 class="contacts__title"> Phone</h2>
+                        <h3 class="contacts__text"> +012 345 6789</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer__copyright"> © 2015 Company. All right reserved.
+                </div>
+                <div class="footer__logo"> Cahee
+                </div>
+                <div class="footer__slogan">Made with <span class="footer__slogan--red">love </span>by Auskteez
+                </div>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="./src/jquery.mask.js"></script>
+        </div>
+    </main>
+</body>
+
+</html>
