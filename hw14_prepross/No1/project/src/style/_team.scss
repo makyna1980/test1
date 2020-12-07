@@ -1,0 +1,239 @@
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.header {
+    height: 140px;
+    &__title {
+     font-family: $baseFont;
+     font-size: $baseFontSize;
+     color: $titleColor;
+     text-align: center;
+     line-height: $lineheight;
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+     padding-top: 110px;   
+    }
+    &__subtitle {
+     font-family: $secFont; 
+     color: $secondColor;
+     font-size: $baseFontSize + 44px;
+     text-align: center;
+     text-transform: uppercase;
+     padding-bottom: 55px;
+    }
+    &__separator {
+        &_div{
+           text-align: center;
+           &::before, &::after {
+            content: '';  
+            height: 1px;
+            position: relative;
+            width: 20%;
+            display: inline-block;
+            background-color: $secondColor;
+            top: -9px;
+            }
+          .icon-d {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            stroke-width: 0;
+            stroke: $secondColor;
+            fill: $secondColor;
+            }
+        }
+    }   
+     /*@extend .separator;
+     &:before {
+        width: 450px;
+        }
+        .img-divider {
+            @include angleborder ($secondColor, 2px);
+            }*/
+}
+.main {
+    padding-top: 165px;
+    height: 560px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__photo {
+       width: 50%;
+       height: auto;
+       display: flex;
+       flex-direction: row;
+       justify-content: space-between;
+       padding-top: 75px;
+           &_arrow {
+             position: relative;
+             width: 82px;  
+             height: 30%;  
+             text-align: center;
+             top: 200px;
+             font-family: $baseFont;
+             font-size: $baseFontSize + 15px;
+             color: $secondColor;
+           }  
+           &_border {
+             width: 390px;
+             height: 390px; 
+             position: relative;
+             display: inline-block;
+             border: 1px solid $secondColor;
+             padding: 16px 16px 16px 16px;
+             margin-right: 80px; 
+              ::before {
+                content: "";
+                position: absolute;
+                z-index: 0;
+                height: calc(100% + 10px);
+                width: 50%;
+                background-color: white;
+                top: -5px;
+                left: 25%;
+            }
+              ::after {
+                content: "";
+                position: absolute;
+                height: 50%;
+                width: calc(100% + 10px);
+                background-color: white;
+                top: 25%;
+                left: -5px;
+            }
+           .main__photo_img {
+             width: 388px;
+             height: 388px;  
+             margin: 0;
+             padding: 0;
+        }            
+           .main__photo_pic {
+             position: absolute;
+             border: 1px solid $secondColor;
+             margin: 0;
+             padding: 0;
+             top: 4%;
+             left: 4%;
+        }
+    } 
+}
+    &__info  {
+        width: 50%;
+        height: 490px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-left: 1px solid $secondColor;
+        padding-top: 75px;
+            &_arrow {
+                position: relative;
+                width: 82px;  
+                height: 30%;  
+                text-align: center;
+                top: 200px;
+                font-family: $baseFont;
+                font-size: $baseFontSize + 15px;
+                color: $secondColor;
+            }  
+            .details {
+                width: 585px;
+                height: 657px;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                margin-left: 80px; 
+                    &__name {
+                        padding-top: 15px;
+                        font-family: $secFont;
+                        font-size: $baseFontSize + 16px;
+                        font-weight: bolder;
+                        letter-spacing: 1px;
+                        color: $mainColor;
+                    }
+                    &__separator {
+                        padding-top: 30px;
+                        &::before {
+                        content: '';  
+                        height: 1px;
+                        position: relative;
+                        width: 20%;
+                        display: inline-block;
+                        background-color: $secondColor;
+                    }
+            }
+            &__position {
+                padding-top: 30px;
+                font-family: $baseFont;
+                font-size: $baseFontSize + 11px;
+                color: $mainColor;
+            }
+            &__social {
+                width: 200px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin: 0 auto;
+                padding-top: 26px;
+                padding-bottom: 30px;
+                    .icon {
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        stroke-width: 1;
+                        stroke: #cccccc;
+                        fill: #cccccc;
+                }
+            }
+            &__descr {
+                font-family: $baseFont;
+                font-size: $baseFontSize;
+                font-weight: lighter;
+                line-height: $lineheight;
+                color: #333333; 
+            }
+            &__button {
+                padding-top: 26px;
+                &_view {
+                    outline-style: none;
+                    border: 1px solid $secondColor;
+                    width: 120px;
+                    height: 24px;
+                    background-color: #ffffff;
+                    color: $mainColor;
+                    font-family: $baseFont;
+                    font-size: $baseFontSize;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.footer {
+    height: 50px;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 65px;
+        .icon-o {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            stroke-width: 1;
+            stroke: $secondColor;
+            fill: $secondColor;
+                &:hover{
+                fill: #ffffff;
+            }    
+        }
+    }
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Roboto:wght@900&display=swap');
