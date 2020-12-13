@@ -1,0 +1,289 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+*{
+    -webkit-transition: all 1s ease-in;
+    -o-transition: all 1s ease-in;
+    transition: all 1s ease-in;
+}
+body {
+    background-color: #9789f9;
+    font-size: 16px;
+}
+.container {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   /*flex-direction: row; и так выстроиться в строку*/ 
+   -ms-flex-pack: distribute; 
+       justify-content: space-around;
+   max-width: 1100px;
+   min-height: auto;
+   margin: 6.25em auto;
+    @include _375 {
+    flex-direction: column;
+    margin: auto 0;
+    align-items: center;
+    }
+}
+.tarif {
+   width: 31.5%;
+   background-color: $grColor;
+   margin: 1.25em;
+   text-align: center;
+   @include _375 {
+    width: 80%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+    &__price {
+        padding-top: 0.5em;
+        font-family: $fontTitle;
+        border: 1px solid $grColor;
+        font-size: 3.75em;
+        &:before {
+        content: '$';
+        font-size: 0.5em;
+        vertical-align: super;
+        }
+        &:after {
+        content: '/HR';
+        font-size: 0.5em;
+        }
+    }
+    &__name {
+        padding-top: 0.5em;
+        font-family: $baseFont;
+        font-size: 1.5em;
+        text-transform: uppercase;
+        /*font-weight: bold;*/
+        letter-spacing: 0.25em;
+        @include _768 {
+            font-size: 1em;
+        }
+    }
+    &__box {
+        margin-top: 2em;
+        padding-top: 2.1em;
+        background-color: $whtColor;
+        width: 99%;
+        height: 24.687em;
+        border: 1px solid $whtColor;
+        border-radius: 100%/50%; 
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        @include _375 {
+            padding-top: 1em;
+            height: 15em;
+        } 
+    }
+    &__benefits {
+        text-align: left;
+        list-style: none;
+        padding-left: 4.9375em;
+        @include _992 {
+            padding-left: 2.9375em;
+        } 
+    }
+    &__benefit {
+        padding-top: 2.5em;
+        font-size: 1em;
+        font-family: $fontText;
+        @include _375 {
+            padding-top: 1em;
+        }   
+    }
+    &__footer {
+        position: relative;
+        background-color: $grColor;
+        height: 3.875em;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    }
+    &__btn {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+        position: absolute;
+        top: 4.1em;
+        font-family: $baseFont;
+        font-size: 1.1em;
+        letter-spacing: 0.08em;
+        background-color: $regColor;
+        color: $whtColor;
+        border-color: $regColor;
+        margin: auto 0;
+        width: 12.75em;
+        height: 3.25em;
+        border-radius: 1.5625em 1.5625em 1.5625em 1.5625em;
+        @include _768 {
+            width: 10em;
+            height: 2.5em;
+            top: 2.1em;
+        }
+            &--red {
+                background-color: $popColor;
+                top: -1.8em;
+                @include _768 {
+                    top: -1.2em;
+                }
+            }
+    }
+    &__pop {
+        width: 37%;
+        margin: -1.5625em 0;
+        @include _375 {
+            width: 90%;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+    }
+    &__discount {
+        padding-top: 0.6875em;
+        color: #a9a9a9;
+        font-family: $fontText;
+        font-size: 0.6875em;
+    }
+    .box__pop {
+        height: 28em;
+        @include _375 {
+            height: 17em;
+        } 
+    }
+    .tooltip {
+        /*position: absolute;*/
+        position: relative;
+        z-index: 1;
+        top: -3em;
+        left: 7.5em;
+        display: inline-block;
+        border: 1px solid $popColor;
+        width: 2.8125em;
+        height: 2.8125em;
+        border-radius: 50%;
+        background: $popColor;
+        &:hover .tooltip__label {
+            visibility: visible;
+        }
+        @include _992 {
+            top: -3em;
+            left: 6em;
+        }
+        @include _768 {
+            display: none;
+        }
+
+            &__p {
+                font-family: $baseFont;
+                font-size: 1em;
+                margin-top: 0.9em;
+                color: $whtColor;
+            }
+            &__label {
+                visibility: hidden;
+                width: 120px;
+                background-color: $baseColor;
+                font-family: $baseFont;
+                font-size: 1em;
+                color: $whtColor;
+                text-align: center;
+                border-radius: 1.5625em 1.5625em 1.5625em 1.5625em;
+                padding: 5px 0;
+                /* Position the tooltip */
+                position: absolute;
+                z-index: 1;
+                top: 0.5em;
+                left: 9.2em;
+                margin-left: -6em;
+                &:after {
+                content: " ";
+                position: absolute;
+                top: 50%;
+                right: 99%; /* To the left of the tooltip */
+                margin-top: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent $baseColor transparent transparent;
+                }
+            }    
+            &__circle {
+                /*visibility: hidden;*/
+                position: absolute;
+                z-index: 1;
+                top: -0.7em;
+                left: 2.4em;
+                display: inline-block;
+                border: 1px solid $popColor;
+                width: 0.8em;
+                height: 0.8em;
+                border-radius: 50%;
+                background: $popColor;
+            }
+            &__point {
+                /* visibility: hidden;*/
+                position: absolute;
+                z-index: 1;
+                top: -1.2em;
+                left: 3.6em;
+                display: inline-block;
+                border: 1px solid $popColor;
+                width: 0.2em;
+                height: 0.2em;
+                border-radius: 50%;
+                background: $popColor;
+            }
+    }       
+    .pop__footer {
+        position: relative;
+        background-color: $grColor;
+        height: 5.625em;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -ms-flex-line-pack: center;
+            align-content: center;
+    }
+     
+    .ti {
+            font-family: 'themify';
+            font-size: 2em;
+    }
+}
+
+
+/*.pop__tooltip:hover .pop__circle {
+    visibility: visible;
+}
+.pop__tooltip:hover .pop__point {
+    visibility: visible;
+}*/
+
+
