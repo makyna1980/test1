@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="top">
+            <span class="clear"></span>
+            <div class="screen"></div>
+        </div>
+
+        <div class="keys">
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+            <span class="operator">+</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span class="operator">-</span>
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span class="operator">÷</span>
+            <span>0</span>
+            <span>.</span>
+            <span class="eval">=</span>
+            <span class="operator">x</span>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        let num1 = '';
+        let num2 = '';
+        let operator = '';
+        let total = '';
+        $(document).ready(function () {
+
+            $('span').on('click', function (e) {
+                let btn = e.target.innerHTML;
+
+                if (btn >= '0' && btn <= '9') {
+                    handleNumber(btn);
+                }
+                else {
+                    handleOperator(btn);
+                }
+                // else if (btn == !'clear') {
+                //     handleOperator(btn);
+                // }
+                // else if (btn == 'clear') {
+                //     total = '';
+                //     num1 = '';
+                //     num2 = '';
+                //     operator = '';
+                // }
+            });
+        });
+
+        function handleNumber(num) {
+            if (num1 === '') {
+                num1 = num;
+            } else {
+                num2 = num;
+            }
+            displayButton(num);
+        }
+        function handleOperator(oper) {
+            if (operator === '') {
+                operator = oper;
+            } else {
+                handleTotal();
+                operator = oper;
+            }
+        }
+        function displayButton(btn) {
+            $('.screen').text(btn);
+        }
+        function handleTotal() {
+            switch (operator) {
+                case '+':
+                    total = +num1 + +num2;
+                    displayButton(total);
+                    break;
+                case '-':
+                    total = +num1 - +num2;
+                    displayButton(total);
+                    break;
+                case 'x':
+                    total = +num1 * +num2;
+                    displayButton(total);
+                    break;
+                case '÷':
+                    total = +num1 / +num2;
+                    displayButton(total);
+                    break;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
