@@ -1,0 +1,104 @@
+body {
+    background-color: white;
+}
+.head {
+    width: 100vw;
+}
+.head__title {
+    margin-top: 65px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #303030;
+    text-align: center;
+    font-weight: bold;
+}
+.head__text {
+    width: 1070px;
+    line-height: 90px;
+    font-size: 86px;
+    font-family: 'Poppins', sans-serif;
+    color: #303030;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+.slider .slide {
+    position: relative;
+    height: 70vh;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.slide:hover .slide__bg{
+    visibility: visible;
+}
+.slide:hover .slide__article{
+    visibility: visible;
+}
+.slide:hover .slide__author{
+    visibility: visible;
+}
+
+.slide__bg {
+    position: absolute;
+    top: 150px;
+    opacity: 0.6;
+    visibility: hidden;
+}
+.slide__article {
+    position: absolute;
+    left: 60px;
+    bottom: 200px;
+    font-size: 28px;
+    font-family: 'Poppins', sans-serif;
+    width: 350px;
+    line-height: 24px;
+    text-align: left;
+    visibility: hidden;
+    color: #fff;
+    letter-spacing: 5.6px
+}
+.slide__author {
+    position: absolute;
+    left: 60px;
+    bottom: 160px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    visibility: hidden;
+    color: #fff;
+    letter-spacing: 5.6px
+}
+/* .action {
+    background-color: chartreuse;
+    border-color: 1px solid chartreuse;
+    height: 60px;
+    width: 180px;
+    color: blanchedalmond;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 20px;
+} */
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 45%;
+    z-index: 9;
+}
+.slick-prev {
+    left: 20px;
+}
+.slick-next {
+    right: 20px;
+}
+.icon {
+    display: inline-block;
+    width: 4em;
+    height: 4em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
