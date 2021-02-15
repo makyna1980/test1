@@ -1,0 +1,39 @@
+.image {
+    height: 500px;
+    width: auto;
+    position: relative;
+}
+.red {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background: none;
+    top: 59px;
+    left: 160px;
+}
+.yellow {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background: none;
+    top: 166px;
+    left: 160px;
+}
+.green {
+    position: absolute;
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    background: none;
+    top: 276px;
+    left: 160px;
+}
+button {
+    width: 130px;
+    height: 55px;
+    color: white;
+    background: yellowgreen;
+    font-size: 20px;
+}

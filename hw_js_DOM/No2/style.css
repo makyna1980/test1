@@ -1,0 +1,48 @@
+.modal {
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    overflow: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; 
+    align-items: center;
+    z-index: 9;
+    padding:30px 0;
+    background: grey;
+}
+.modal__window {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 15%;
+    left: 30%;
+    display: flex;
+    flex-flow: column nowrap; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 99;
+    background-color: grey
+}
+button {
+    background: yellowgreen;
+    width: 150px;
+    height: 80px;
+    font-size: 20px;
+    color: white;
+    margin: 0 auto;}
+.main {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center; 
+    align-items: center;
+}
+
+.main__title {
+    text-align: center;
+
+}
