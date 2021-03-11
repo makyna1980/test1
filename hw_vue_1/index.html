@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data binding</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <div class="content" id="app">
+        <button class="content__btn_red" @click="pressKeyLeft(); refreshBlue()"
+            @contextmenu="pressKeyRight(); refreshBlue()" contextmenu="disabled">таблетка</button>
+        <button class="content__btn_blue" @click="showTime(); refreshRed()">таблетка</button>
+        <br>
+        <br>
+        <p class="text" v-show="mousekey">{{mousekey}}</p>
+        <p class="text" v-show="hours">{{hours}}:{{minutes}}</p>
+
+    </div>
+
+    <script>
+        var sample = new Vue({
+            el: '#app',
+            data: {
+                visible: false,
+                hours: '',
+                minutes: '',
+                mousekey: '',
+                isClicked: false,
+            },
+            methods: {
+                pressKeyLeft() {
+                    if (onclick = true) {
+                        this.mousekey = 'Нажата левая кнопка';
+                        console.log(this.mousekey);
+                    }
+                    else {
+                        this.mousekey = 'Жмите на кнопочки мышки'
+                    }
+                },
+                pressKeyRight() {
+                    if (onclick = true) {
+                        this.mousekey = 'Нажата правая кнопка';
+                        console.log(this.mousekey);
+                    }
+                    else {
+                        this.mousekey = 'Жмите на кнопочки мышки'
+                    }
+                },
+                refreshRed() {
+                    this.mousekey = '';
+                },
+                showTime() {
+                    let now = new Date();
+                    this.hours = now.getHours();
+                    this.minutes = now.getMinutes();
+                },
+                refreshBlue() {
+                    this.hours = '';
+                    this.minutes = ''
+                }
+            }
+        });
+
+        window.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        }, false);
+        // window.addEventListener('click', function (e) {         // не получается
+        //     var elem = document.getElementsByClassName("content");
+        //     if (elem.style.visibility === 'hidden') {
+        //         elem.style.visibility = 'visible';
+        //         console.log(1)
+        //     }
+        // })
+
+    </script>
+
+</body>
+
+</html>
