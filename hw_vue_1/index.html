@@ -16,13 +16,15 @@
 <body>
 
     <div class="content" id="app">
-        <button class="content__btn_red" @click="pressKeyLeft(); refreshBlue()"
+        <div class="box" v-show="isVisible"> <!-- оборачиваем контент в див и используем v-show-->
+            <button class="content__btn_red" @click="pressKeyLeft(); refreshBlue()"
             @contextmenu="pressKeyRight(); refreshBlue()" contextmenu="disabled">таблетка</button>
-        <button class="content__btn_blue" @click="showTime(); refreshRed()">таблетка</button>
-        <br>
-        <br>
-        <p class="text" v-show="mousekey">{{mousekey}}</p>
-        <p class="text" v-show="hours">{{hours}}:{{minutes}}</p>
+            <button class="content__btn_blue" @click="showTime(); refreshRed()">таблетка</button>
+            <br>
+            <br>
+            <p class="text" v-show="mousekey">{{mousekey}}</p>
+            <p class="text" v-show="hours">{{hours}}:{{minutes}}</p>
+        </div>
 
     </div>
 
@@ -35,6 +37,7 @@
                 minutes: '',
                 mousekey: '',
                 isClicked: false,
+                isVisible: false // скрываем по умолчанию 
             },
             methods: {
                 pressKeyLeft() {
@@ -73,13 +76,9 @@
         window.addEventListener('contextmenu', function (e) {
             e.preventDefault();
         }, false);
-        // window.addEventListener('click', function (e) {         // не получается
-        //     var elem = document.getElementsByClassName("content");
-        //     if (elem.style.visibility === 'hidden') {
-        //         elem.style.visibility = 'visible';
-        //         console.log(1)
-        //     }
-        // })
+        window.addEventListener('click', function () {  
+            sample.isVisible = true // изменяем значение видимости в нашем приложении. Теперь при клике в любом месте появятся кнопки
+        })
 
     </script>
 
