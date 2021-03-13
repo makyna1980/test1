@@ -1,1 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <br />
+        <div class="main" id="app">
+            <div class="content" v-show="isShown">
+                <p class="text" v-bind:style="{color: stylecolor, 'font-size': '40px'}" v-show="textcolor">{{textcolor}}
+                </p>
+                <!--интересно, что можно добавить background в стили, но нельзя добавить border -->
+            </div>
+            <div class="value">
+                <input type="text" v-model="color4text" placeholder="введите цвет">
+                <button @click="submitText">применить</button>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        var sample = new Vue({
+            el: '#app',
+            data: {
+                colors: ["red", "orange", "yellow", "green", "blue", "navy", "violet"],
+                color4text: "",
+                textcolor: "",
+                stylecolor: "",
+                isShown: false,
+            },
+            methods: {
+                submitText: function () {
+                    let array = this.colors;
+                    this.textcolor = this.color4text;
+                    for (let i = 0; i < array.length; i++) {
+                        if (array[i] == this.color4text) {
+                            this.stylecolor = array[i]
+                            console.log(this.textcolor)
+                        }
+                        this.isShown = true
+                    }
+                    if (!this.stylecolor) {
+                        // this.textcolor = "" 
+                        this.textcolor = "ой! ошибочка вышла"
+                        alert("введите один из цветов радуги")
+                    }
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>

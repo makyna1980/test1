@@ -1,0 +1,20 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(cute-unicorn-seamless-pattern-background_1895-818.jpg);
+    text-align: center;
+}
+.text {
+    font-size: 40px;
+    font-weight: 700;
+    background-color: #fff;
+}
+.value{
+    padding-top: 200px;
+}
+button {
+
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    color: #fff;
+    outline-style: none;
+}
